@@ -1,12 +1,14 @@
-# Rack::CustomHeader
+# Rack::PermissiveCors
 
-Set custom HTTP headers using this special rack middleware. 
+Set Permissive CORS headers using this special rack middleware. This
+might solve your problem with broken fonts on firefox, and overly polite
+Ajax queries.
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
-    gem 'rack-customheader', git: "git@github.com:svevang/rack-customheader.git"
+    gem 'rack-permissive-cors', git: "git@github.com:jackpine/rack-permissive-cors.git"
 
 And then execute:
 
@@ -16,12 +18,12 @@ And then execute:
 
 E.g you can force permissive CORS headers on all requests in case your CDN cache doesn't vary on Origin. _I'm looking at you Cloudfront!_
 
-In config/environements/production.rb:
+In config/environments/production.rb:
 
     # Make sure to insert this middleware before `ActionDispatch::Static`
-    config.middleware.insert_before(ActionDispatch::Static, 
-                                    Rack::CustomHeader, 
-                                    {'Access-Control-Allow-Origin' => '*', 'Access-Control-Allow-Methods' => 'GET, POST'})
+    require 'rack/permissive-cors'
+    config.middleware.insert_before(ActionDispatch::Static,
+                                    Rack::PermissivesCors)
 
     # serve your static assets using rails.
     config.serve_static_assets = true

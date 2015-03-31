@@ -3,12 +3,12 @@ lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |spec|
-  spec.name          = "rack-customheader"
-  spec.version       = "0.0.1"
+  spec.name          = "rack-permissive-cors"
+  spec.version       = "0.1.0"
   spec.authors       = ["Sam Vevang"]
   spec.email         = ["sam.vevang@gmail.com"]
-  spec.description   = %q{Set arbitrary HTTP headers via Rack middleware}
-  spec.summary       = %q{Set arbitrary HTTP headers via Rack middleware}
+  spec.description   = %q{Set permissive CORS HTTP headers via Rack middleware}
+  spec.summary       = %q{Set permissive CORS HTTP headers via Rack middleware}
   spec.homepage      = ""
   spec.license       = "MIT"
 
