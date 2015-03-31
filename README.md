@@ -23,7 +23,7 @@ In config/environments/production.rb:
     # Make sure to insert this middleware before `ActionDispatch::Static`
     require 'rack/permissive-cors'
     config.middleware.insert_before(ActionDispatch::Static,
-                                    Rack::PermissivesCors)
+                                    Rack::PermissiveCors)
 
     # serve your static assets using rails.
     config.serve_static_assets = true
