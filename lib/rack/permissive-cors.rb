@@ -13,8 +13,8 @@ module Rack
     def cors_header
       {
        'Access-Control-Allow-Origin' => '*',
-       'Access-Control-Allow-Methods' => '*',
-       'Access-Control-Allow-Headers' => '*'
+       'Access-Control-Allow-Methods' => 'GET, POST, PUT, DELETE',
+       'Access-Control-Allow-Headers' => 'Authorization'
       }
     end
   end
