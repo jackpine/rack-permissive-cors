@@ -1,5 +1,7 @@
 module Rack
   class PermissiveCors
+    VERSION = '0.1.0'
+
     def initialize(app)
       @app = app
     end
@@ -11,7 +13,11 @@ module Rack
     end
 
     def cors_header
-      {'Access-Control-Allow-Origin' => '*', 'Access-Control-Allow-Methods' => 'GET, POST'}
+      {
+       'Access-Control-Allow-Origin' => '*',
+       'Access-Control-Allow-Methods' => 'GET, POST, PUT, DELETE',
+       'Access-Control-Allow-Headers' => 'Authorization'
+      }
     end
   end
 end
