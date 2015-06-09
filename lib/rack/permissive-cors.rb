@@ -11,7 +11,11 @@ module Rack
     end
 
     def cors_header
-      {'Access-Control-Allow-Origin' => '*', 'Access-Control-Allow-Methods' => 'GET, POST'}
+      {
+       'Access-Control-Allow-Origin' => '*',
+       'Access-Control-Allow-Methods' => '*',
+       'Access-Control-Allow-Headers' => '*'
+      }
     end
   end
 end
