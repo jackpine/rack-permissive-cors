@@ -1,5 +1,7 @@
 module Rack
   class PermissiveCors
+    VERSION = '0.1.0'
+
     def initialize(app)
       @app = app
     end
