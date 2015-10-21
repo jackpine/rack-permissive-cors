@@ -16,7 +16,7 @@ module Rack
       {
        'Access-Control-Allow-Origin' => '*',
        'Access-Control-Allow-Methods' => 'GET, POST, PUT, DELETE',
-       'Access-Control-Allow-Headers' => 'Authorization'
+       'Access-Control-Allow-Headers' => 'Authorization, Origin, X-Requested-With, Content-Type, Accept'
       }
     end
   end
